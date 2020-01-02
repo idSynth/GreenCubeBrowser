@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.web.WebView?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.MainController">
+   <children>
+      <WebView fx:id="webView" layoutY="70.0" minWidth="10.0" prefHeight="460.0" prefWidth="960.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="70.0" />
+      <TabPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="31.0" prefWidth="960.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <tabs>
+            <Tab text="Browser Tab">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="12.0" prefWidth="960.0" />
+               </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+      <TextField fx:id="linkTextField" layoutX="100.0" layoutY="30.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="32.0" prefWidth="762.0" promptText="Enter link" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="98.0" AnchorPane.topAnchor="30.0" />
+      <Button fx:id="backBtn" layoutX="10.0" layoutY="33.0" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#goBack" prefHeight="25.0" prefWidth="25.0" text="&lt;" AnchorPane.topAnchor="33.0" />
+      <Button fx:id="fwdBtn" layoutX="40.0" layoutY="33.0" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#goFwd" prefHeight="25.0" prefWidth="25.0" text="&gt;" AnchorPane.topAnchor="33.0" />
+      <Button fx:id="rldBtn" layoutX="70.0" layoutY="33.0" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#reloadAction" prefHeight="25.0" prefWidth="25.0" text="O" AnchorPane.topAnchor="33.0">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </Button>
+      <Button fx:id="srchBtn" layoutX="790.0" layoutY="33.0" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#searchAction" prefHeight="25.0" prefWidth="68.0" text="Search" AnchorPane.rightAnchor="102.0" AnchorPane.topAnchor="33.0" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Point3D?>
+<?import javafx.scene.PointLight?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Box?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<TitledPane animated="false" collapsible="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.WelcomeController">
+  <content>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+         <children>
+            <Text fx:id="greenCubeLogo" layoutX="175.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="GreenCube">
+               <font>
+                  <Font name="Microsoft YaHei Light" size="56.0" />
+               </font>
+            </Text>
+            <Box fx:id="greenCube" depth="30.0" height="30.0" layoutX="151.0" layoutY="68.0" width="30.0">
+               <rotationAxis>
+                  <Point3D x="1.0" y="1.0" z="1.0" />
+               </rotationAxis>
+            </Box>
+            <Text fx:id="errorText" fill="RED" layoutX="204.0" layoutY="117.0" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.0" text="Incorrect login or password!" textAlignment="CENTER" visible="false" wrappingWidth="194.13671875">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <PointLight cache="true" color="CHARTREUSE" layoutX="158.0" />
+            <PointLight cache="true" color="CHARTREUSE" layoutX="134.0" layoutY="200.0" />
+            <PointLight cache="true" color="CHARTREUSE" layoutX="151.0" layoutY="68.0" translateZ="-25.0" />
+            <Button fx:id="loginButton" layoutX="236.0" layoutY="261.0" mnemonicParsing="false" onAction="#loginAction" prefHeight="32.0" prefWidth="130.0" text="Close" />
+            <TextArea disable="true" editable="false" layoutX="166.0" layoutY="102.0" prefHeight="145.0" prefWidth="270.0" text="GreenCube Browser is an experimental internet&#10;browser made by Misha Ivanov. Bla bla bla bla bla. Blabla bla bla bla bla bla. Bla bla bla bla bla. Blabla bla bla bla bla bla. Bla bla bla bla bla. Blabla bla bla bla bla bla. Bla bla bla bla bla. Blabla bla bla bla bla bla. Bla bla bla bla bla. Blabla bla bla bla bla bla." visible="false" wrapText="true" />
+            <Text layoutX="92.0" layoutY="118.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" text="GreenCube Browser is an experimental internet browser made by Misha Ivanov. This browser works with JavaFX built-in Webview component. The project is currently WIP and you can support it with your feedbacks.&#10;E-mail: mishkachudik1@gmail.com" textAlignment="CENTER" wrappingWidth="410.0">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+  </content>
+   <graphic>
+      <Button fx:id="closeButton" alignment="CENTER_RIGHT" mnemonicParsing="false" onAction="#closeAction" text="X" translateX="560.0" visible="false" />
+   </graphic>
+</TitledPane>
